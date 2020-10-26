@@ -1,3 +1,5 @@
+from collections import deque
+
 # Numeric Data Type ****************************************************************************************************
 
 # Integer
@@ -31,7 +33,7 @@ print(x.replace(" ", "Jahadul"))  # Replace String
 print(x.split())  # Split String
 
 # List -----------------------------------------------------------------------------------------------------------------
-# -------------Ordered and Changeable
+# Mutable-------------Ordered and Changeable
 
 mylist = [1, ["Sunno", "rakib", "dilruba"], 3, 3, 4, 5]
 print(type(mylist))
@@ -50,7 +52,7 @@ print(mylist)
 print(mylist.count(3))  # count a value how much time comes
 
 # Set ------------------------------------------------------------------------------------------------------------------
-# -------------Ordered, Changeable and Contain Unique value
+# Mutable-------------Ordered, Changeable and Contain Unique value
 x = {1, 2, 3, 4, 5}
 print(type(x))
 y = set([8, 6, 23])  # convert list to set using set method
@@ -86,15 +88,28 @@ s4 = s1.union(s2, s3)
 print(s4)
 
 # Tuple ----------------------------------------------------------------------------------------------------------------
-# -------------Ordered and unChangeable
+# Immutable-------------Ordered and unChangeable
 x = (1, 2, 3, 4, 5)
 print(type(x))
 del x  # only tuple can be deleted but its memory efficient
 
 # Range ----------------------------------------------------------------------------------------------------------------
-x = range(1, 7)
+x = range(1, 7)  # Start from 1 to 7
 print(x)
 print(type(x))
+x = list(range(1, 20, 2))  # convert into list and increase 2 in every step
+print(x)
+
+# Stack
+listOne = ["java", "python", "Go", "Rust"]
+print(listOne)
+listOne.pop()  # its take last input object LIFO
+if not listOne:
+    print("Book shelf is empty.")
+
+# Queue
+bank = deque(["a", "b", "c", "d"])
+print(bank.popleft())
 
 # Dictionary Data Type *************************************************************************************************
 
@@ -127,10 +142,10 @@ nd1 = {1: {1: "Jahadul1", 2: "23"},
        3: {1: "Jahadul3", 2: "23"},
        4: {1: "Jahadul4", 2: "23"}}
 print(nd1)
-print(nd1[1][2]) #data access
+print(nd1[1][2])  # data access
 # add date
-nd1[5] ={5: "Jahadul5", 2: "23"} # add
+nd1[5] = {5: "Jahadul5", 2: "23"}  # add
 print(nd1)
 
-del nd1[2] #delete
+del nd1[2]  # delete
 print(nd1)
