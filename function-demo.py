@@ -57,10 +57,12 @@ print(list(result))
 result = [i * 2 for i in x]
 print(result)
 
-
-#Zip Function
+# Zip Function
 x = [1, 2, 3, 4, 5, 6]
-name = ["rakib", "monir","Roni", "bili"]
+name = ["rakib", "monir", "Roni", "bili"]
 
-result = list(zip(x, name,"ABCDEF"))
+result = list(zip(x, name, "ABCDEF"))
 print(result)
+
+# Magic Method
+
