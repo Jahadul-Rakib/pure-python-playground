@@ -1,3 +1,6 @@
+import functools
+
+
 # function
 
 def add_number(x, y):
@@ -52,6 +55,17 @@ print(result)
 result = filter(lambda x: x < 5, x)  # Filter remove those value which do not meet requirement
 print(list(result))
 
+# Reduce Method
+# import functools
+listOne = [1, 2, 34, 4, 5, 2]
+
+
+def add_value(num1, num2):
+    return num1 + num2
+
+
+result = functools.reduce(add_value, listOne)
+print("From Reduce ", result)
 # List Comprehensive function
 # [condition FOR receiver IN list]
 result = [i * 2 for i in x]
@@ -64,5 +78,21 @@ name = ["rakib", "monir", "Roni", "bili"]
 result = list(zip(x, name, "ABCDEF"))
 print(result)
 
-# Magic Method
+# Lambda function
+result = lambda x, y: x + y
+print("From Lamda: ", result(2, 3))
+# or
+result = (lambda x, y: x + y)(2, 4)
+print("From Lamda: ", result)
 
+# Global variable
+
+x = 100
+
+
+def check():
+    global x
+    y = x + 10
+    return print(y)
+check()
+print(x)
