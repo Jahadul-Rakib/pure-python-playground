@@ -42,3 +42,12 @@ for i in x:
 print(a)
 
 
+# Assertion
+
+def getScore(i):
+    # condition , Message
+    assert i < 10, "Score do not less 10."
+    print(i)
+
+
+getScore(70)
